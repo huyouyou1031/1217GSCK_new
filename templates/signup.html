@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block Title %} signup {% end %}
+{% block content %}
+
+<form action="/signup" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        用户名
+        <input class="form-control" id="id_username" name="username"\
+                type="text" autofocus="" maxlength="150" required="">
+    </div>
+
+    <div class="form-group">
+        密&emsp;码
+        <input class="form-control" type="password" id="id_password1" name="password1"\
+               required="">
+    </div>
+
+    <div class="form-group">
+        确认密码
+        <input class="form-control" type="password" id="id_password2" name="password2"\
+               required="">
+    </div>
+
+    <button class="btn btn-default">注册</button>
+
+    <div class="text-center help-text">
+        已有账号，请<a href="/login">登录</a>
+    </div>
+
+</form>
+
+{% end %}

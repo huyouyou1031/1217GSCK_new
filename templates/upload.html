@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block Title %} upload page {% end %}
+
+{% block content %} this is upload
+<br>
+{##}
+<form action="/upload" enctype="multipart/form-data" method="post">
+    <input type="file" name="newimg">
+    <input type="submit">
+</form>
+
+{% end %}
+
+
+

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block Title %} post page {% end %}
+
+{% block content %}
+
+
+上传人: {{post.user.name}} <br>上传时间: {{"post.created"}}<br>
+<img src="{{ static_url(post.image_url) }}" WIDTH="200PX"/><br>
+{% if like_count %}
+<i class="fa fa-heart text-danger"></i>{{ like_count }}
+{% end %}
+
+{% end %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block Title %} login page {% end %}
+
+{% block content %} 欢迎你
+        {% if current_user %}
+        {{ current_user }}
+        {% end %}
+<div class="row justify-content-center">
+    <div class="col-sm-6">
+
+        <form method="post" action="/login?next={{ url_escape(nextname) }}" enctype="multipart/form-data">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user fa-fw"></i></span>
+                </div>
+
+                <input type="text" class="form-control" placeholder="用户名" aria-label="Username"
+                       aria-describedby="basic-addon1"
+                       name="username" required="">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-key fa-fw"></i></span>
+                </div>
+
+                <input type="password" class="form-control" placeholder="密码" aria-label="Username"
+                       aria-describedby="basic-addon2" name="password" required="">
+
+            </div>
+
+            <button  class="btn btn-primary">登录</button>
+            <div class="zc">
+                没有账号，请<a href="/signup">注册</a>
+            </div>
+    </div>
+</div>
+
+
+</form>
+
+{% end %}

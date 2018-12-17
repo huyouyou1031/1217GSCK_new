@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/css/bootstrap.css?v=d26ecc887c12f855a908679dae6704e3">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<title> login page </title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#"> <i class="fab fa-font-awesome"></i> tudo28</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item active">
+<a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/explore">发现</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/upload">上传</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+用户信息
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="#">收藏</a>
+<a class="dropdown-item" href="/profile">个人档案</a>
+<a class="dropdown-item" href="/room">聊天室</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<div class="container">
+ 欢迎你
+
+<div class="row justify-content-center">
+<div class="col-sm-6">
+<form method="post" action="/login?next=%2Fpost%2F18" enctype="multipart/form-data">
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text" id="basic-addon1"><i class="fa fa-user fa-fw"></i></span>
+</div>
+<input type="text" class="form-control" placeholder="用户名" aria-label="Username"
+aria-describedby="basic-addon1"
+name="username" required="">
+</div>
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text" id="basic-addon1"><i class="fa fa-key fa-fw"></i></span>
+</div>
+<input type="password" class="form-control" placeholder="密码" aria-label="Username"
+aria-describedby="basic-addon2" name="password" required="">
+</div>
+<button class="btn btn-primary">登录</button>
+<div class="zc">
+没有账号，请<a href="/signup">注册</a>
+</div>
+</div>
+</div>
+</form>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+crossorigin="anonymous"></script>
+
+
+</body>
+</html>

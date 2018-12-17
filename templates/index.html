@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block Title %} Index Page {% end %}
+
+{% block content %}
+<div class="row">
+
+    <div class="col col-md-8">
+
+        {% for p in posts %}
+        <a href="/post/{{p.id}}">
+            <img src="{{ static_url(p.image_url) }}" class="figure-img img-fluid rounded"/>
+        </a>
+        {% end %}
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/static/images/5.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">简介</h5>
+                <p class="card-text">这里是个人简介，此处省略1万字</p>
+                <a href="#" class="btn btn-primary">查看完整资料</a>
+            </div>
+        </div>
+
+        {% if current_user %}
+        <div> 当前用户：{{ current_user }}</div>
+        {% end %}
+        当前时间：
+        {{datetime.datetime.now()}}
+
+    </div>
+
+
+</div>
+
+
+{% end %}
